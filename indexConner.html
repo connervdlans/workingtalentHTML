@@ -1,0 +1,73 @@
+
+<style> 
+    textarea{
+        background-color: navy;
+        color: white;
+    }
+    h1{
+        background-color: bisque;
+        color: red;
+    }
+    #random:hover{
+        background-color: blanchedalmond;
+        color: yellowgreen;
+    }
+    textarea.aanbieding{
+        background-color: cadetblue;
+        color: wheat;
+        padding:20px;
+        margin:10px;
+        border:2px dashed green;
+    }
+</style>
+
+typen
+kaas
+
+TAGS
+<b id="random">test</b>
+random
+<b>Andere b</b>
+
+<h1 id = "detitel" class="aanbieding">Header</h1>
+<textarea class = "aanbieding"></textarea>
+<br>niks </br>
+<input>Voer wat in:</input>
+
+<br> </br>
+ATTRIBUUT
+<br> </br>
+<textarea cols = 50 rows = 20 autofocus></textarea>
+<input type="checkbox">vinkie </input>
+
+<br> </br>
+EVENTS
+<h1 onclick="mijnfunctie()">We zijn van start</h1>
+<div onclick="tweedefunctie()">Hier kan je klikken</div>
+<br></br>
+
+<div>Geef een naam op</div>
+<input id="userinput">
+
+<script> 
+    function mijnfunctie(){ //eventListener
+        alert("hij doet het")
+    }
+    var x = 24;
+    function tweedefunctie(){
+        console.log(x)
+        x++
+        console.log("========")
+        var element = document.getElementById("detitel")
+        console.log(element.innerHTML)
+        element.innerHTML = "stuk nieuwe tekst"
+        element.style.backgroundColor = 'blue'
+        var y = 25;
+        if (x > y) {
+            alert("hij is groter dan tien")
+        }
+        var var1 = document.getElementById("userinput");
+        console.log(var1.value);
+
+    }
+</script>

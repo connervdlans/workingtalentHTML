@@ -1,0 +1,54 @@
+
+<style>
+    .item{
+        border:2px solid navy;
+
+    }
+</style>
+
+<h1 id="detitel"></h1>
+Geef een input
+<input id = "userinput">
+<input type = "button" value = "Click me for test" onclick=mijnfunctie()>
+<button onclick=mijnfunctie()>Click Me!</button>
+<br></br>
+<b>Boodschappenlijst</b>
+<p id="display-array"></p>
+<div id="boodschappen"></div>
+
+<script> 
+    var rijtje = [5, 20, 14, 154]
+    var rarray = []
+    function mijnfunctie(){ //eventListener
+        var var1 = document.getElementById("userinput").value;
+        var element = document.getElementById("detitel");
+        element.style.color = 'white'
+        if (var1 == "Fred") {
+            element.innerHTML = "Welkom "+ var1
+            element.style.backgroundColor = 'green'
+        } else {
+            element.innerHTML = "Geen toegang "+ var1
+            element.style.backgroundColor = 'red'
+        }
+        for (x in rijtje){
+            console.log(rijtje[x])
+        }
+        console.log(rijtje)
+        // casten parsen
+        var getal = parseInt(document.getElementById("userinput").value);
+        console.log(getal+getal);
+        //append
+        var uinput = document.getElementById("userinput").value
+        rarray.push(uinput)
+        document.getElementById("display-array").textContent = rarray.join(", ");
+        toonlijstje();
+    }
+    function toonlijstje(){
+        var lijstje = document.getElementById("boodschappen");
+        lijstje.innerHTML = "";
+        for (z in rarray){
+            console.log(rarray[z])
+            lijstje.innerHTML += "<div class =item><span>Prijs:</span><br>"+rarray[z]+"</div>";
+        }
+    }
+</script>
